@@ -1,0 +1,473 @@
+/* Layout Principal */
+.eventos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .eventos-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Painel de Lista de Pendentes */
+.eventos-lista-section {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.eventos-lista-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.sem-pendencias {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Cards de Solicitação */
+.lista-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.card-solicitacao {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #f26b0f; /* Laranja padrão do sistema na lateral */
+  padding: 1.2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: transform 0.2s ease;
+}
+
+.card-solicitacao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card-info {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Área de Detalhes do Solicitante */
+.card-detalhes {
+  background-color: #f5f7fa;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px dashed #ccc;
+  font-size: 0.9rem;
+  color: #555;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.nota-detalhes {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ações e Botões */
+.card-acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.acoes-principais {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.btn-detalhes, .btn-aceitar, .btn-recusar {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-detalhes {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #555;
+  width: 100%;
+}
+
+.btn-detalhes:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn-aceitar, .btn-recusar {
+  flex: 1;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-aceitar {
+  background-color: #1b5e20; /* Verde Escuro da paleta */
+}
+
+.btn-recusar {
+  background-color: #d84315; /* Laranja mais Escuro/Avermelhado */
+}
+
+.btn-aceitar:hover {
+  background-color: #2e7d32;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.btn-recusar:hover {
+  background-color: #bf360c;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+
+/* --- Calendário --- */
+.eventos-calendario-section {
+  flex: 2;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Navegação do Calendário Refinada */
+.calendario-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.calendario-input-wrapper {
+  position: relative;
+}
+
+.calendario-input-mes {
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: bold;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.calendario-input-mes:hover,
+.calendario-input-mes:focus {
+  background-color: #fff;
+  border-color: #f26b0f; /* Cor de destaque (Laranja do sistema) */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(242, 107, 15, 0.1);
+}
+
+.btn-nav-mes {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #555;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.btn-nav-mes:hover {
+  background-color: #f26b0f;
+  color: white;
+  border-color: #f26b0f;
+  transform: scale(1.05);
+}
+
+/* Grid do Calendário */
+.calendario-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.dia-semana-label {
+  text-align: center;
+  font-weight: bold;
+  color: #888;
+  font-size: 0.85rem;
+  padding-bottom: 0.5rem;
+}
+
+.calendario-dia {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  min-height: 90px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  transition: background-color 0.2s;
+}
+
+.calendario-dia.dia-ocupado {
+  background-color: #fdf2e9; /* Fundo levemente alaranjado para dias com evento */
+  border-color: #f26b0f;
+}
+
+.dia-numero {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+  align-self: flex-end; /* Coloca o número do dia no canto direito */
+}
+
+.dia-eventos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.evento-badge {
+  font-size: 0.7rem;
+  padding: 4px;
+  border-radius: 4px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-weight: 600;
+}
+
+.evento-badge.passeio {
+  background-color: #1b5e20; /* Verde escuro */
+}
+
+.evento-badge.hospedagem {
+  background-color: #0288d1; /* Azul para diferenciar */
+}
+
+/* Organização interna dos detalhes */
+.detalhes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.detalhes-grid p, .detalhe-linha {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.detalhe-linha {
+  margin-top: 0.5rem;
+}
+
+.divisor-detalhes {
+  border: 0;
+  border-top: 1px solid #d1d5db;
+  margin: 1rem 0;
+}
+/* Botão do evento dentro do calendário */
+.evento-botao {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: inherit;
+}
+
+.evento-botao:hover {
+  filter: brightness(0.92);
+  transform: translateY(-1px);
+}
+
+/* Modal independente do calendário */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.modal-card-evento {
+  background: #fff;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  animation: modalEntrada 0.25s ease;
+}
+
+@keyframes modalEntrada {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-header-evento {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header-evento h2 {
+  color: #2b7f7f;
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.modal-fechar-x {
+  border: none;
+  background: #f2f2f2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.modal-fechar-x:hover {
+  background: #e5e5e5;
+}
+
+.modal-tipo-badge {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+}
+
+.modal-tipo-badge.passeio {
+  background-color: #1b5e20;
+}
+
+.modal-tipo-badge.hospedagem {
+  background-color: #0288d1;
+}
+
+.modal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-info-item {
+  background: #f4f4f4;
+  border-radius: 12px;
+  padding: 1rem;
+  line-height: 1.4;
+}
+
+.modal-info-item.destaque {
+  background: #eef8f8;
+  border: 1px solid #2b8c8c;
+}
+
+.modal-section {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-section h3 {
+  margin: 0 0 0.5rem 0;
+  color: #245f5f;
+  font-size: 1rem;
+}
+
+.modal-section p {
+  margin: 0.25rem 0;
+  line-height: 1.5;
+}
+
+.modal-section.contato {
+  background: #fafafa;
+}
+
+.modal-acoes {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.btn-fechar-modal {
+  background-color: #2b8c8c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-fechar-modal:hover {
+  background-color: #246f6f;
+}
+
+@media (max-width: 700px) {
+  .modal-card-evento {
+    padding: 1.25rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-header-evento h2 {
+    font-size: 1.5rem;
+  }
+}

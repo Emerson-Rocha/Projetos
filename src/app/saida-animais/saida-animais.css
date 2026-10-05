@@ -1,0 +1,174 @@
+.saida-container {
+  width: 100%;
+  padding: 35px;
+}
+
+.saida-table-container {
+  width: 100%;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #dce8e8;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.saida-table-header {
+  display: grid;
+  grid-template-columns:
+    80px
+    1fr
+    1.5fr
+    1.5fr
+    1fr
+    1fr
+    1fr
+    120px;
+
+  padding: 18px 20px;
+
+  background: #9ef8ee;
+
+  font-weight: 600;
+
+  border-bottom: 1px solid #dce8e8;
+  color:#348888;
+}
+
+.saida-table-row {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    1fr
+    1.5fr
+    1.5fr
+    1fr
+    1fr
+    1fr
+    120px;
+
+  align-items: center;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #eef2f2;
+}
+
+.saida-table-row:hover {
+  background: #fafdfd;
+}
+
+.saida-animal-foto {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.saida-btn-detalhes {
+  border: none;
+
+  background: #348888;
+
+  color: white;
+
+  padding: 10px 16px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.saida-btn-detalhes:hover {
+  opacity: 0.9;
+}
+
+.saida-modal-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.saida-modal-container {
+  width: 900px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 32px;
+}
+
+.saida-modal-container h2 {
+  color: #348888;
+
+  margin-bottom: 24px;
+}
+
+.saida-modal-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+}
+
+.saida-info-box {
+  background: #f7f9f9;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.saida-full {
+  grid-column: span 2;
+}
+
+.saida-modal-buttons {
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: 24px;
+}
+
+.saida-btn-fechar {
+  border: none;
+
+  background: #348888;
+
+  color: white;
+
+  padding: 12px 24px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.saida-btn-fechar:hover {
+  opacity: 0.9;
+}
