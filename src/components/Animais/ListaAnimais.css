@@ -1,0 +1,270 @@
+.lista-container {
+  width: 100%;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-card {
+  background-color: white;
+  border-radius: 22px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.info-card h3 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.info-card span {
+  font-size: 36px;
+  font-weight: bold;
+  color: #348888;
+}
+
+.filtro-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.filtro-container input {
+  width: 100%;
+  max-width: 420px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 2px solid #dcdcdc;
+  font-size: 15px;
+}
+
+.filtro-container input:focus {
+  outline: none;
+  border-color: #22babb;
+}
+
+.filtro-container select {
+  padding: 14px;
+  border-radius: 14px;
+  border: 2px solid #dcdcdc;
+  font-size: 15px;
+  background-color: white;
+}
+
+.filtro-container select:focus {
+  outline: none;
+  border-color: #22babb;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.animais-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.animais-table thead {
+  background-color: #f5f7f7;
+}
+
+.animais-table th,
+.animais-table td {
+  padding: 18px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.animais-table th {
+  color: #348888;
+  font-size: 15px;
+}
+
+.animais-table tbody tr {
+  border-top: 1px solid #ececec;
+}
+
+.animais-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.animal-identificacao {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.animal-foto {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  object-fit: cover;
+  background-color: #f7f9f9;
+}
+
+.animal-sem-foto {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background-color: #f7f9f9;
+  color: #348888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.status-badge {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+}
+
+.status-disponivel {
+  background-color: #2e9e5b;
+}
+
+.status-indisponivel {
+  background-color: #f2a100;
+}
+
+.status-passeando {
+  background-color: #348888;
+}
+
+.status-festa-pijama {
+  background-color: #7b4cc2;
+}
+
+.status-falecido {
+  background-color: #e53935;
+}
+
+.status-adotado {
+  background-color: #777;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.acoes button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background-color: #348888;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.acoes button:hover {
+  background-color: #267171;
+}
+
+.acoes .editar-bloqueado {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 850px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+  color: #348888;
+  margin-bottom: 25px;
+}
+
+.detalhes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.detalhes-grid p {
+  background-color: #f7f9f9;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.modal-fotos {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.modal-fotos img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid #ececec;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.fechar-modal,
+.editar-btn {
+  border: none;
+  background-color: #348888;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.fechar-modal:hover,
+.editar-btn:hover {
+  background-color: #267171;
+}
+
+.sem-registros {
+  text-align: center;
+  color: #666;
+  padding: 30px;
+  font-weight: 600;
+}

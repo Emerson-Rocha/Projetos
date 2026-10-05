@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TOPO */
+
+.navbar-top {
+  width: 100%;
+  height: 80px;
+
+  background-color: #9EF8EE;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 0 40px;
+}
+
+
+
+.circle-button {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+  border: none;
+
+  background-color: white;
+  color: #f24405;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.circle-button:hover {
+  transform: scale(1.06);
+}
+
+.text-button {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+.contrast-circle {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  border: 3px solid #f24405;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.contrast-half {
+  width: 50%;
+  height: 100%;
+
+  background-color: #f24405;
+
+  position: absolute;
+  right: 0;
+}
+
+
+
+.navbar-main {
+  width: 100%;
+  min-height: 170px;
+
+  background-color: #f5f7f7;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 60px;
+}
+
+.logo-left img {
+  width: 230px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.logo-right img {
+  width: 190px;
+}
+

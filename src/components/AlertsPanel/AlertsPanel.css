@@ -1,0 +1,35 @@
+.alerts-panel {
+  background-color: white;
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.alerts-panel h2 {
+  font-size: 28px;
+  color: #348888;
+
+  margin-bottom: 25px;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.alert-item {
+  background-color: #fff3eb;
+
+  color: #f24405;
+
+  padding: 16px 18px;
+
+  border-radius: 14px;
+
+  font-weight: 600;
+}

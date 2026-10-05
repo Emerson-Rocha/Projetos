@@ -1,0 +1,28 @@
+.primary-button {
+  border: none;
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  background-color: #348888;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.primary-button:hover {
+  background-color: #267171;
+
+  transform: translateY(-2px);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+}

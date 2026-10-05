@@ -1,0 +1,148 @@
+.adotantes-container {
+  padding: 30px;
+}
+
+.adotantes-table-container {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.adotantes-table-header {
+  display: grid;
+  grid-template-columns:
+    1fr
+    2fr
+    1.5fr
+    1.2fr
+    1.8fr
+    1.5fr
+    1fr;
+
+  background: #9ef8ee;
+  font-weight: 600;
+  padding: 18px;
+  color: #348888;
+}
+
+.adotantes-table-row {
+  display: grid;
+  grid-template-columns:
+    1fr
+    2fr
+    1.5fr
+    1.2fr
+    1.8fr
+    1.5fr
+    1fr;
+
+  align-items: center;
+  padding: 18px;
+  border-top: 1px solid #eee;
+}
+
+.adotantes-table-row:hover {
+  background: #fafafa;
+}
+
+.adotantes-animal-id {
+  font-weight: 600;
+  color: #348888;
+}
+
+.adotantes-status-aprovado {
+  background: #d4edda;
+  color: #155724;
+  padding: 6px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.adotantes-status-primeira {
+  background: #fff3cd;
+  color: #856404;
+  padding: 6px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.adotantes-btn-detalhes {
+  background: #348888;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.adotantes-btn-detalhes:hover {
+  background: #2c7272;
+}
+
+.adotantes-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.adotantes-modal-container {
+  background: white;
+  width: 800px;
+  max-width: 95%;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.adotantes-modal-container h2 {
+  margin-bottom: 20px;
+  color: #348888;
+}
+
+.adotantes-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.adotantes-info-box {
+  background: #f7f7f7;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.adotantes-full {
+  grid-column: span 2;
+}
+
+.adotantes-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.adotantes-btn-fechar {
+  background: #348888;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.adotantes-btn-fechar:hover {
+  background: #2c7272;
+}
