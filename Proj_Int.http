@@ -1,0 +1,41 @@
+###
+GET http://localhost:3010/
+
+###
+GET  http://localhost:3010/qtd
+###
+GET  http://localhost:3010/animais
+
+###
+POST http://localhost:3010/INSERT
+Content-Type: application/json
+
+{
+    "nome":"test9",
+    "email":"teste@tes.com",
+    "telefone":"0000000123",
+    "senha":"123456",
+    "cpf_cnpj":"00000000123",
+    "tipo_pessoa":"F",
+    "data_nasc":"1990-01-01"
+    
+}
+###
+DELETE http://localhost:3000/usuarios/1 
+
+### 
+PUT http://localhost:3000/usuarios/1
+Content-Type: application/json
+
+{
+    
+   "nome": "Emerson Rocha Atualizado",
+    "email": "emerson.novo@email.com",
+    "telefone": "(15) 98888-8888",
+    "senha": "654321",
+    "cpf_cnpj": "123.456.789-00",
+    "tipo_pessoa": "F",
+    "data_nasc": "1982-05-20",
+    "status": "A"
+    
+}
